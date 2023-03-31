@@ -27,7 +27,7 @@ for i = 0, numTracks-1 do
         _, paramName = reaper.TrackFX_GetParamName(track, j, k, "")
         if paramName == "Sample Start" then
            reaper.TrackFX_SetParam(track, j, k, paramVal)
-           reaper.SetMediaTrackInfo_Value(track, "D_PLAY_OFFSET", ms/1000)
+           reaper.SetMediaTrackInfo_Value(track, "D_PLAY_OFFSET",-ms/1000)
            if ms ~= 0 then
              reaper.SetMediaTrackInfo_Value(track, "I_PLAY_OFFSET_FLAG", 0)
             else 
